@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Love Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+        }
+
+        /* overlay escuro para dar vibe cinematográfica */
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(2px);
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .error {
+            font-size: 120px;
+            font-weight: bold;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart {
+            font-size: 120px;
+            color: #ff4d6d;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 0 20px #ff4d6d;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        .text {
+            font-size: 22px;
+            margin-top: -10px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(255, 77, 109, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="error">4<span class="heart">❤️</span>4</div>
+        <div class="text">Oops… esta página perdeu-se. Mas o amor não.</div>
+        <button class="btn" onclick="window.location.href='index.html'">Voltar ao início</button>
+    </div>
+</body>
+</html>
